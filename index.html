@@ -1,0 +1,137 @@
+<!DOCTYPE html> <!-- DICHIARAZIONE HTML5 -->
+<html lang="it" dir="ltr"> <!-- inizio sito -->
+
+  <head> <!-- SEZIONE HEAD -->
+    <meta charset="utf-8"> <!-- codifica del sito -->
+    <!-- META TAG -->
+      <meta name="author" content="Carmine Squillace"> <!-- autore del sito -->
+      <meta name="description" content="Tesla, Inc. è un'azienda statunitense specializzata nella produzione di auto elettriche"> <!-- snippet di descrizione per lo spider dei motori di ricerca -->
+      <meta name="keywords" content="Tesla, Automobili, Auto elettriche"> <!-- keywords di ricerca per apparire in prima pagina (SEO & SERP) -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- effettua un ridimensionamento del testo per tablet e smartphone (responsive) -->
+
+    <title>Tesla</title> <!-- titolo del sito -->
+
+    <!-- INCLUSIONE DEI FOGLI DI STILE -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css"> <!-- CSS DI AZZERAMENTO (per svuotare la cache del browser) -->
+    <!-- GOOGLE FONT -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <!-- FOGLIO DI STILE DEL SITO -->
+      <link rel="stylesheet" href="style/style.css" type="text/css">
+
+    <!-- JQUERY (API hostate da GOOGLE) -->
+    <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head> <!-- FINE HEAD -->
+
+  <body> <!-- CORPO DEL SITO -->
+
+    <!-- HEADER  -->
+    <header class="header flexbox">
+      <img src="img/logorosso.png" alt="logo" class="header__logo"/>
+      <ul class="header__menu">
+        <i class="fas fa-bars menu__mobile"></i>
+        <li class="header__menu__item"><a href="index.html">Home</a></li>
+        <li class="header__menu__item"><a href="#modelli">Auto</a></li>
+        <li class="header__menu__item"><a href="#motto">Motto</a></li>
+        <li class="header__menu__item"><a href="#slider">Gallery</a></li>
+      </ul>
+    </header>
+    <!-- -------- -->
+
+    <!-- PRIMARY  -->
+    <div class="primary flexbox">
+      <div class="primary__circle"></div>
+      <img src="img/motore.png" alt="motore" class="primary__motore">
+      <div class="primary__text">
+        <h1>innovativa tecnologia dual motor con trazione integrale</h1>
+        <p>Model 3 è disponibile con dual motor a trazione integrale, cerchi Überturbine da 20",
+          freni Performance e assetto ribassato per il massimo controllo, in qualsiasi condizione
+          climatica. Inoltre, lo spoiler in fibra di carbonio aumenta la stabilità alle alte velocità,
+          consentendo a Model 3 di accelerare da 0 a 100 km/h in soli 3,3 secondi.</p>
+        <button type="button" name="button">test drive</button>
+      </div>
+    </div>
+    <!--  ------ -->
+
+    <div class="auto flexbox" id="modelli">
+      <h1>LE NOSTRE AUTO</h1>
+    </div>
+
+    <!--    MODELLI    -->
+    <div class="modelli">
+      <div class="modelli_3 flexbox">
+        <h1>MODEL 3</h1>
+      </div>
+      <div class="modelli_T flexbox">
+        <h1>MODEL T</h1>
+      </div>
+      <div class="modelli_S flexbox">
+        <h1>MODEL S</h1>
+      </div>
+    </div>
+    <!--  --- -->
+
+    <!--    MODEL S    -->
+    <div class="models">
+      <div class="models__auto"></div>
+      <div class="models__text">
+        <h1>MODEL S</h1>
+        <p class="description">La Model S ridefinisce gli standard del settore in termini di prestazioni e sicurezza. Il powertrain completamente elettrico di Tesla offre prestazioni senza eguali in tutte le condizioni climatiche, grazie al Dual Motor a trazione integrale, alle sospensioni pneumatiche adattive e
+          all'accelerazione superlativa.</p>
+      </div>
+    </div>
+    <!--    --------   -->
+
+    <!--  WILD   -->
+    <div class="wild flexbox" id="motto">
+      <h1>Born to be WILD</h1>
+    </div>
+    <!--    ---  -->
+
+    <!--  GALLERY   -->
+    <div class="gallery" id="slider">
+        <div class="img-1"></div>
+
+        <div class="gallery__two">
+          <div class="img-2"></div>
+
+          <div class="gallery__three">
+            <div class="img-3"></div>
+            <div class="img-4"></div>
+          </div>
+        </div>
+    </div>
+    <!--    ---  -->
+
+    <!--  FOOTER   -->
+    <footer class="flexbox">
+      <div class="sub">
+      </div>
+      <div class="footer flexbox">
+        <img src="img/logorosso.png" alt="logo" class="footer__logo">
+      </div>
+    </footer>
+    <!--    --------   -->
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $(window).scroll(function(){ //menu padding on scroll
+          var Scroll = window.pageYOffset;
+          if (Scroll > 100){
+            $(".header").addClass("--scroll");
+            $(".header__logo").addClass("--resize");
+          }else{
+            $(".header").removeClass("--scroll");
+            $(".header__logo").removeClass("--resize");
+          }
+        });
+
+        $('.menu__mobile').click(function(){
+          $('.header__menu__item').toggle(100);
+        });
+      });
+    </script> <!-- FINE SCRIPT -->
+  </body>
+</html> <!-- FINE SITO -->
